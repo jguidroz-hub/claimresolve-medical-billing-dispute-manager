@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-interface ClaimsDetailItem
+interface ClaimsDetailItem {
   id: string;
   title?: string;
   status?: string;
@@ -10,7 +10,7 @@ interface ClaimsDetailItem
   [key: string]: any;
 }
 
-export default function ClaimsDetailPage
+export default function ClaimsDetailPage() {
   const [items, setItems] = useState<ClaimsDetailItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [showCreate, setShowCreate] = useState(false);
