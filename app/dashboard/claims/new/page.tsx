@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-interface Claims/newItem {
+interface ClaimsNewItem {
   id: string;
   title?: string;
   status?: string;
@@ -10,8 +10,8 @@ interface Claims/newItem {
   [key: string]: any;
 }
 
-export default function Claims/newPage() {
-  const [items, setItems] = useState<Claims/newItem[]>([]);
+export default function ClaimsNewPage {
+  const [items, setItems] = useState<ClaimsNewItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [showCreate, setShowCreate] = useState(false);
   const [newTitle, setNewTitle] = useState('');
