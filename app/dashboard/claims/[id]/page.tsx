@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-interface Claims/[id]Item {
+interface ClaimsDetailItem
   id: string;
   title?: string;
   status?: string;
@@ -10,8 +10,8 @@ interface Claims/[id]Item {
   [key: string]: any;
 }
 
-export default function Claims/[id]Page() {
-  const [items, setItems] = useState<Claims/[id]Item[]>([]);
+export default function ClaimsDetailPage
+  const [items, setItems] = useState<ClaimsDetailItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [showCreate, setShowCreate] = useState(false);
   const [newTitle, setNewTitle] = useState('');
@@ -39,7 +39,7 @@ export default function Claims/[id]Page() {
   };
 
   const handleDelete = async (id: string) => {
-    await fetch(`/api/claims/[id]/${id}`, { method: 'DELETE' });
+    await fetch(`/ApiClaimsDetail/${id}`, { method: 'DELETE' });
     setItems(prev => prev.filter(i => i.id !== id));
   };
 
